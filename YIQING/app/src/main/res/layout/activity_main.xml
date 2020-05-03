@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <com.hbt.yiqing.component.MapView
+        android:id="@+id/map"
+        app:map="@raw/china"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"/>
+    <LinearLayout
+        android:paddingLeft="70dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:id="@+id/now_radio_btn"
+                android:layout_marginRight="30dp"
+                android:text="现存疫情地图"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/total_radio_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="累计疫情地图" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+<!--    toptip-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/toptip_long"
+            android:text="地区"
+            android:layout_height="wrap_content"/>
+        <TextView
+            style="@style/toptip_long"
+            android:text="累计确诊"
+            android:layout_height="wrap_content"/>
+        <TextView
+            style="@style/toptip_long"
+            android:text="现存确诊"
+            android:layout_height="wrap_content"/>
+        <TextView
+            style="@style/toptip_long"
+            android:text="疑似"
+            android:layout_height="wrap_content"/>
+        <TextView
+            style="@style/toptip_long"
+            android:text="治愈"
+            android:layout_height="wrap_content"/>
+        <TextView
+            style="@style/toptip_long"
+            android:text="死亡"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <!--tiptop end-->
+
+    <!--中国数据-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000000"
+            android:id="@+id/china_name"
+            style="@style/toptip_long_china"
+            android:text="全国"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/china_confirm"
+            style="@style/toptip_long_china"
+            android:text="82121"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/china_curConfirm"
+            style="@style/toptip_long_china"
+            android:text="700"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/china_suspect"
+            style="@style/toptip_long_china"
+            android:text="6"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/china_heal"
+            style="@style/toptip_long_china"
+            android:text="81100"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/china_dead"
+            style="@style/toptip_long_china"
+            android:text="4300"
+            android:layout_height="wrap_content"/>
+    </LinearLayout><!--中国数据 end -->
+
+
+
+    <!--省份数据-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/provincename"
+            style="@style/toptip_long_province"
+            android:text="省份"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/provinceconfirm"
+            style="@style/toptip_long_province"
+            android:text="0"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/provincecurConfirm"
+            style="@style/toptip_long_province"
+            android:text="0"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/provincesuspect"
+            style="@style/toptip_long_province"
+            android:text="0"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/provinceheal"
+            style="@style/toptip_long_province"
+            android:text="0"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/provincedead"
+            style="@style/toptip_long_province"
+            android:text="0"
+            android:layout_height="wrap_content"/>
+    </LinearLayout><!--省份数据 end -->
+    
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            android:layout_width="300dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@mipmap/ic_launcher" />
+            <Button
+                android:id="@+id/jump_btn"
+                android:textSize="30dp"
+                android:text="查看世界疫情"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>
+
+
+
+

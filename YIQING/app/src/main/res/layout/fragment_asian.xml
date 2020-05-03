@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AsianFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--    toptip-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/toptip_long"
+                android:text="地区"
+                android:layout_height="wrap_content"/>
+            <TextView
+                style="@style/toptip_long"
+                android:text="累计确诊"
+                android:layout_height="wrap_content"/>
+            <TextView
+                style="@style/toptip_long"
+                android:text="现存确诊"
+                android:layout_height="wrap_content"/>
+            <TextView
+                style="@style/toptip_long"
+                android:text="疑似"
+                android:layout_height="wrap_content"/>
+            <TextView
+                style="@style/toptip_long"
+                android:text="治愈"
+                android:layout_height="wrap_content"/>
+            <TextView
+                style="@style/toptip_long"
+                android:text="死亡"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <!--tiptop end-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
